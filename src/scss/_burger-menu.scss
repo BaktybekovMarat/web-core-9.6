@@ -1,0 +1,17 @@
+@media (min-width: 320px), (max-width: 768px) {
+
+  //navigation menu setting
+  .navigation-menu__up-buttons {
+    margin: 23px 0px 0px 5px;
+  }
+  .navigation-menu__down-buttons {
+    margin: 0;
+  }
+  .navigation-menu__lists {
+    margin-top: 0;
+  }
+  .navigation-menu {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
