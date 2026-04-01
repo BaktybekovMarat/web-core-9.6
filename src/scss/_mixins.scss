@@ -1,0 +1,21 @@
+
+
+@mixin hidden-elements($overflow, $opacity, $height) {
+  overflow: $overflow;
+  opacity: $opacity;
+  height: $height;
+}
+@mixin grid-style ($columns, $rows){
+ grid-template-columns: $columns;
+ grid-template-rows: $rows;   
+}
+@mixin grid-column ($columns){
+    grid-template-columns: $columns;
+}
+@mixin text-parameters ($fw, $fs, $lh, $ls, $tt) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-transform: $tt;
+}

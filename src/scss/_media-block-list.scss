@@ -1,0 +1,56 @@
+@media (max-width: 767px) {
+  .navigation-menu__item.call,
+  .navigation-menu__item.chat,
+  .navigation-menu__item.profile,
+  .stick,
+  .stick2,
+  .stick-mobile,
+  .text--vision-for-min-width768px,
+  .text--vision-for-min-width1120px,
+  .page__repair-and-check-status-link,
+  .second-style-grid-item,
+  .grid-item-hide-btn,
+  .grid-item-showMore-btn,
+  .hidden-on-mobile,
+  .for-desktop-side-bar,
+  .footer-tablet-desktop-version {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .navigation-menu__item.call,
+  .navigation-menu__item.chat,
+  .navigation-menu__item.profile,
+  .stick,
+  .stick2,
+  .text--vision-for-min-width768px,
+  .hidden-on-mobile {
+    display: block;
+  }
+  .stick-mobile,
+  .text--vision-for-min-width1120px,
+  .page__repair-and-check-status-link,
+  .swiper,
+  .swiper2,
+  .swiper3,
+  .for-desktop-side-bar,
+  .desktop-version-elements,
+  .footer-mobile-version {
+    display: none;
+  }
+}
+@media (min-width: 1120px) {
+  .page__navigation-menu,
+  .swiper,
+  .footer-for-mobile-version,
+  .swiper-pagination,
+  .footer-mobile-version {
+    display: none;
+  }
+
+  .text--vision-for-min-width1120px,
+  .page__repair-and-check-status-link,
+  .for-desktop-side-bar {
+    display: block;
+  }
+}

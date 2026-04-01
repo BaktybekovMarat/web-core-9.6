@@ -1,0 +1,255 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media (max-width: 767px) {
+  #side-bar-button {
+    display: none;
+    @include hidden-elements(hidden, 0, 0);
+  }
+  .side-bar {
+    background-color: $content-bg-color;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $navigation-box-shadow;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 100dvh;
+    min-height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+  }
+ 
+  .side-bar__up-buttons {
+    width: 40px;
+    height: 40px;
+    margin: 18px 0px 50px 5px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .side-bar__up-buttons a {
+    width: 96.55px !important;
+    height: 50.81px !important;
+    margin-left: 3px;
+  }
+  .side-bar__up-buttons span:last-child {
+    margin: 5px 23px 0 60px;
+  }
+  img {
+    transition: 0.1s ease-in-out;
+    filter: drop-shadow(1px);
+  }
+  img:hover {
+    background: $img-bg-color;
+    transform: translateY(1px);
+    box-shadow: $img-box-shadow-hover-color;
+  }
+  .side-bar__lists,
+  .side-bar__down-buttons {
+    list-style-type: none;
+  }
+  .side-bar__lists {
+    margin-left: -10px;
+    margin-top: 0px;
+    @include text-parameters(500px, 16px, 40px, -0.2px, none);
+    color: $text-color;
+    cursor: pointer;
+  }
+  .side-bar__lists > span {
+    border-left: 4px solid $header-hg-color;
+    padding-left: 12px;
+    color: $header-color;
+    margin-left: -20px;
+  }
+  .side-bar__down-buttons {
+    display: flex;
+    gap: 20px;
+    margin: auto 0 0 8px;
+    cursor: pointer;
+  }
+  .side-bar__contacts {
+    color: $text-color;
+    font-weight: bold;
+    margin: 0 0 20px 18px;
+    cursor: pointer;
+  }
+  .side-bar__contacts > p:nth-child {
+    font: bolder;
+    font-weight: 900;
+  }
+  .side-bar__contacts span:first-of-type {
+    color: $header-color;
+  }
+}
+
+@media (min-width: 768px) {
+  #side-bar-button {
+    display: none;
+    @include hidden-elements(hidden, 0, 0);
+  }
+  .side-bar {
+    background-color: $content-bg-color;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $navigation-box-shadow;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 100dvh;
+    min-height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+  }
+  .side-bar__up-buttons {
+    width: 40px;
+    height: 40px;
+    margin: 18px 0px 50px 5px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .side-bar__up-buttons a {
+    width: 96.55px !important;
+    height: 50.81px !important;
+    margin-left: 3px;
+  }
+  .side-bar__up-buttons span:last-child {
+    margin: 5px 23px 0 60px;
+  }
+  img {
+    transition: 0.1s ease-in-out;
+    filter: drop-shadow(1px);
+  }
+  img:hover {
+    background: $img-bg-color;
+    transform: translateY(1px);
+    box-shadow: $img-box-shadow-hover-color;
+  }
+  .side-bar__lists,
+  .side-bar__down-buttons {
+    list-style-type: none;
+  }
+  .side-bar__lists {
+    margin-left: -10px;
+    color: $text-color;
+    cursor: pointer;
+    @include text-parameters(500px, 16px, 40px, -0.2px, none);
+  }
+  .side-bar__lists > span {
+    border-left: 4px solid $header-hg-color;
+    padding-left: 12px;
+    color: $header-color;
+    margin-left: -20px;
+  }
+  .side-bar__down-buttons {
+    display: flex;
+    gap: 20px;
+    margin: auto 0 0 8px;
+    cursor: pointer;
+  }
+  .side-bar__contacts {
+    color: $text-color;
+    font-weight: bold;
+    margin: 0 0 20px 18px;
+    cursor: pointer;
+  }
+  .side-bar__contacts > p:nth-child {
+    font: bolder;
+    font-weight: 900;
+  }
+  .side-bar__contacts span:first-of-type {
+    color: $header-color;
+  }
+}
+
+@media (min-width: 1120px) {
+  #side-bar-button {
+    display: none !important;
+    visibility: hidden;
+    @include hidden-elements(hidden, 0, 0);
+  }
+  .side-bar {
+    background-color: $content-bg-color;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none !important;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 100dvh;
+    min-height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .side-bar__up-buttons {
+    width: 40px;
+    height: 40px;
+    margin: 23px 0px 50px 12px;
+    cursor: pointer;
+  }
+  .side-bar__up-buttons a {
+    width: 96.55px !important;
+    height: 50.81px !important;
+    margin-left: 10px;
+  }
+  .side-bar__up-buttons span {
+    margin-left: 120px !important;
+  }
+
+  .side-bar__lists,
+  .side-bar__down-buttons {
+    list-style-type: none;
+  }
+  .side-bar__up-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  .side-bar__lists {
+    margin-left: -10px;
+    color: $text-color;
+    cursor: pointer;
+    @include text-parameters(500px, 16px, 40px, -0.2px, none);
+  }
+  .side-bar__lists > span {
+    border-left: 4px solid $header-hg-color;
+    padding-left: 12px;
+    color: $header-color;
+    margin-left: -20px;
+  }
+  .side-bar__down-buttons {
+    display: flex;
+    gap: 20px;
+    margin: auto 0px 20px 12px;
+    cursor: pointer;
+  }
+  .side-bar__contacts {
+    color: $text-color;
+    font-weight: bold;
+    margin: 0 0 20px 15px;
+    cursor: pointer;
+  }
+  .side-bar__contacts > p:nth-child {
+    font: bolder;
+    font-weight: 900;
+  }
+  .side-bar__contacts span:first-of-type {
+    color: $header-color;
+  }
+}

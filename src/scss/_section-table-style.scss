@@ -1,0 +1,48 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media (min-width: 768px) {
+  .swiper3__second-style-table {
+    color: $text-color;
+    border-radius: 6px;
+    @include text-parameters(400, 14px, 18px, 0.2px, none);
+    width: calc(100% - 48px);
+    margin: 24px;
+
+    & > thead > tr {
+      padding: 10px;
+      margin: 10px;
+      height: 40px;
+    }
+    & td {
+      padding: 0 20px;
+    }
+    & > tbody > tr {
+      border-bottom: 1px solid $contents-border-color;
+      background-color: $content-bg-color;
+      height: 65px;
+    }
+    & button {
+      text-transform: uppercase;
+      width: 119px;
+      height: 32px;
+      border-radius: 16px;
+      background-color: $button-color;
+      color: $content-bg-color;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    & button {
+      transition: 0.1s ease-in-out;
+      filter: drop-shadow(1px);
+    }
+    & button:hover {
+      background: $img-bg-color;
+      transform: translateY(1px);
+      box-shadow: $img-box-shadow-hover-color;
+    }
+  }
+}

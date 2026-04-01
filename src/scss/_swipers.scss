@@ -1,0 +1,105 @@
+@use 'variables' as *;
+
+@media (max-width: 767px) {
+  .swiper1 {
+    width: 100%;
+    height: 140px;
+    margin: 0 auto;
+  }
+  .swiper-wrapper {
+    margin-top: 16px;
+    display: flex;
+    align-items: flex-start;
+    color: $content-bg-color;
+  }
+  .swiper-slide {
+    gap: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $content-bg-color;
+    border: 1px solid $contents-border-color;
+    width: 240px !important;
+    height: 72px;
+    margin: 0 16px;
+    cursor: pointer;
+  }
+
+  .swiper2 {
+    width: 100%;
+    height: 220px;
+    margin: 0 auto;
+  }
+  .swiper-wrapper2 {
+    display: flex;
+    align-items: flex-start;
+    color: $content-bg-color;
+  }
+  .swiper-slide2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: $content-bg-color;
+    border: 1px solid $contents-border-color;
+    width: 240px;
+    height: 160px;
+    margin: 0 16px;
+    color: $text-color;
+    cursor: pointer;
+  }
+
+  .swiper-slide2 span {
+    padding: 16px;
+  }
+  .swiper-slide2 .btn-next {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    margin: 0;
+  }
+  .swiper3 {
+    height: 290px;
+    margin: 0;
+  }
+  .swiper-wrapper3 {
+    display: flex;
+    color: $content-bg-color;
+    align-items: flex-start;
+  }
+  .swiper-slide3 {
+    display: block;
+    justify-content: center;
+    width: 260px !important;
+    height: 200px !important;
+    padding: 16px;
+    cursor: pointer;
+  }
+  .swiper3__paragraph {
+    margin: 0;
+    color: $header-color;
+    margin-bottom: 8px;
+  }
+  .swiper-slide3 button {
+    text-transform: uppercase;
+    width: 119px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: $button-color;
+    color: $content-bg-color;
+    border: none;
+    cursor: pointer;
+    margin-left: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide3 button {
+    transition: 0.1s ease-in-out;
+    filter: drop-shadow(1px);
+  }
+  .swiper-slide3 button:hover {
+    background: $img-bg-color;
+    transform: translateY(1px);
+    box-shadow: $img-box-shadow-hover-color;
+  }
+}

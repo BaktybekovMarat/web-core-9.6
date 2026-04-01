@@ -1,0 +1,20 @@
+@use 'variables' as *;
+.effect-button {
+  transition: 0.1s ease-in-out;
+  filter: drop-shadow(1px);
+  border-radius: 10px;
+}
+.effect-button:hover {
+  border: $img-bg-color;
+  transform: translateY(1px);
+  box-shadow: $img-box-shadow-hover-color;
+}
+img {
+  transition: 0.1s ease-in-out;
+  filter: drop-shadow(1px);
+}
+img:hover {
+  background: $img-bg-color;
+  transform: translateY(1px);
+  box-shadow: $img-box-shadow-hover-color;
+}

@@ -1,0 +1,19 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.btn-next {
+  margin: 0 15px;
+  border: none;
+  background-color: $content-bg-color;
+  width: 40px;
+  height: 40px;
+}
+.main-content__read-more-button {
+  display: flex;
+  cursor: pointer;
+  margin-left: 15px;
+  gap: 5px;
+  width: 132px;
+  height: 24px;
+  @include text-parameters(500, 16px, 24px, -0.2px, none);
+}

@@ -1,0 +1,231 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media (min-width: 768px) {
+  .swiper1__second-style-grid {
+    display: grid;
+    margin: 24px 24px;
+    @include grid-style(repeat(3, minmax(0, 1fr)), repeat(2, 72px)); //235
+    row-gap: 24px;
+  }
+  .second-style-grid-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 224px;
+    height: 72px;
+    border: 1px solid $contents-border-color;
+    background-color: $content-bg-color;
+    cursor: pointer;
+  }
+  .second-style-grid-item--hidden {
+    display: grid;
+    margin: 24px 24px 5px 24px;
+    cursor: pointer;
+    @include grid-style(repeat(3, minmax(0, 1fr)), repeat(1, 72px));
+    @include hidden-elements(hidden, 0, 0);
+  }
+  .grid-item-showMore-btn {
+    margin: 10px 0 24px 25px;
+    width: 134px;
+    height: 24px;
+    display: flex;
+    border: none;
+    color: $text-color;
+    background-color: $bg-color;
+    cursor: pointer;
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+  }
+  .grid-item-hide-btn {
+    margin: 24px 0 0 0;
+    width: 88px;
+    height: 24px;
+    display: flex;
+    border: none;
+    color: $text-color;
+    background-color: $bg-color;
+    @include hidden-elements(hidden, 0, 0);
+    cursor: pointer;
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+     grid-column: 1 / -1;
+    justify-self: start;
+  }
+  //second section style
+  .swiper2__second-style-grid {
+    display: grid;
+    margin: 24px;
+    gap: 24px;
+    @include grid-style(repeat(3, minmax(0, 1fr)), repeat(1, 160px));
+  }
+  .second-style-grid-item2 {
+    background-color: $content-bg-color;
+    border: 1px solid $contents-border-color;
+    width: 224px;
+    height: 160px;
+    color: $text-color;
+    display: flex;
+    margin: 0;
+    padding: 16px;
+    flex-wrap: wrap;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    min-width: 0;
+    row-gap: 24px;
+    column-gap: 24px;
+  }
+  .second-style-grid-item2 .btn-next {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+  }
+  .second-style-grid-item2--hidden {
+    display: grid;
+    margin: 24px;
+    cursor: pointer;
+    @include hidden-elements(hidden, 0, 0);
+    gap: 24px;
+    @include grid-style(repeat(3, minmax(0, 1fr)), repeat(1, 160px));
+  }
+  .second-style-grid-item2-show-button {
+    margin: 0 0 24px 24px;
+    width: 134px;
+    height: 24px;
+    display: flex;
+    border: none;
+    color: $text-color;
+    background-color: $bg-color;
+    cursor: pointer;
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+  }
+  .second-style-grid-item2-hide-button {
+    margin: 0;
+    padding: 0;
+    width: 88px;
+    height: 24px;
+    display: flex;
+    border: none;
+    color: $text-color;
+    background-color: $bg-color;
+    cursor: pointer;
+    grid-column: 1 / -1;
+    justify-self: start;
+    @include hidden-elements(hidden, 0, 0);
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+  }
+}
+
+@media (min-width: 1120px) {
+  .swiper1__second-style-grid {
+    display: grid;
+    row-gap: 24px;
+    column-gap: 24px;
+    margin: 24px;
+    @include grid-style(repeat(4, minmax(0, 1fr)), repeat(2, 72px));
+  }
+  .second-style-grid-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+    border: 1px solid $contents-border-color;
+    background-color: $content-bg-color;
+    cursor: pointer;
+    margin: 0;
+  }
+  .desktop-version-elements{
+    display: flex !important;
+    justify-content: space-between;
+  }
+  .second-style-grid-item--hidden {
+    row-gap: 24px;
+    column-gap: 24px;
+    margin: 24px;
+    display: grid;
+    @include hidden-elements(hidden, 0, 0);
+    @include grid-style(repeat(4, minmax(0, 1fr)), repeat(1, 72px));
+    cursor: pointer;
+  }
+  .grid-item-showMore-btn {
+    margin: 24px 0 24px 24px;
+    width: 134px;
+    height: 24px;
+    display: flex;
+    border: none;
+    color: $text-color;
+    background-color: $bg-color;
+    cursor: pointer;
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+  }
+  .grid-item-hide-btn {
+    padding: 0;
+    margin: 24px 0 0 0;
+    width: 88px;
+    height: 24px;
+    display: flex;
+    border: none;
+    color: $text-color;
+    cursor: pointer;
+    @include hidden-elements(hidden, 0, 0);
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+  }
+
+  .swiper2__second-style-grid {
+    display: grid;
+    @include grid-style(repeat(4, minmax(0, 1fr)), repeat(1, 160px));
+    gap: 15px;
+    margin: 24px;
+  }
+  .second-style-grid-item2 {
+    background-color: $content-bg-color;
+    border: 1px solid $contents-border-color;
+    width: 240px;
+    height: 160px;
+    color: $text-color;
+    display: flex;
+    margin: 0;
+    padding: 15px;
+    flex-wrap: wrap;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .second-style-grid-item2 .btn-next {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+  }
+  .second-style-grid-item2--hidden {
+    display: grid;
+    column-gap: 24px;
+    gap: 15px;
+    margin: 24px 24px 24px 24px;
+    @include hidden-elements(hidden, 0, 0);
+    @include grid-style(repeat(4, minmax(0, 1fr)), repeat(1, 160px));
+    cursor: pointer;
+  }
+  .second-style-grid-item2-show-button {
+    margin: 0 0 24px 24px;
+    width: 134px;
+    height: 24px;
+    display: flex;
+    border: none;
+    color: $text-color;
+    cursor: pointer;
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+  }
+  .second-style-grid-item2-hide-button {
+    margin: 24px 0 0 0;
+    width: 88px;
+    height: 24px;
+    display: flex;
+    border: none;
+    color: $text-color;
+    @include hidden-elements(hidden, 0, 0);
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+    cursor: pointer;
+  }
+}

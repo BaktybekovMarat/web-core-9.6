@@ -1,0 +1,52 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+.page__title-page {
+  margin: 15px 0;
+  padding: 5px 15px;
+  border-left: 4px solid $header-hg-color;
+  border-radius: 6px;
+  @include text-parameters(900, 40px, 40px, -0.6px, none);
+}
+.section-title {
+  height: 56px;
+  min-width: 320px;
+  border-top: 1px solid $border-color;
+  background: $section-header-color;
+  display: flex;
+  padding-left: 16px;
+  flex-wrap: nowrap;
+
+  h2 {
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    color: $header-color;
+    @include text-parameters(400, 16px, 24px, -0.2px, uppercase);
+  }
+}
+@media (max-width: 767px) {
+  .page__title-page {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .page__title-page {
+    margin-top: 24px;
+  }
+  .section-title {
+    display: flex;
+    height: 56px;
+    padding-left: 24px;
+  }
+}
+@media (min-width: 1120px) {
+  .page__title-page {
+    white-space: nowrap;
+    margin-top: 30px;
+  }
+  .section-title {
+    height: 56px;
+    margin-bottom: 25px;
+    padding-left: 32px;
+  }
+}

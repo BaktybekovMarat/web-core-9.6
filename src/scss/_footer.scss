@@ -1,0 +1,53 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer {
+  margin-top: 25px;
+  padding: 20px 20px 0 20px;
+  border-top: 1px solid $border-color;
+  height: 180px;
+  text-align: center;
+  color: $header-color;
+  @include text-parameters(500, 14px, 16px, 0px, none);
+}
+@media (max-width: 767px) {
+  .repair-and-service {
+    color: $text-color;
+    display: flex;
+  }
+  .footer-mobile-version {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .service-and-prices__information {
+    padding: 24px;
+    max-width: 550px;
+  }
+  .footer-tablet-desktop-version {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer {
+    margin: 10px;
+    padding: 30px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1120px) {
+  .service-and-prices__information {
+    max-width: 550px;
+  }
+  .footer-tablet-desktop-version {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .footer {
+    margin: 10px;
+    padding: 30px;
+    height: auto;
+  }
+}

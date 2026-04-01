@@ -1,0 +1,59 @@
+@use 'variables' as *;
+.logo {
+  cursor: pointer;
+  width: 96.55px;
+  height: 50.81px;
+  position: absolute;
+  left: 80px;
+  top: 18px;
+}
+.navigation-menu__item.profile {
+  cursor: pointer;
+  position: absolute;
+  right: 180px;
+}
+
+.navigation-menu__item.chat {
+  cursor: pointer;
+  position: absolute;
+  right: 290px;
+}
+
+.navigation-menu__item.call {
+  cursor: pointer;
+  position: absolute;
+  right: 235px;
+}
+
+.stick2 {
+  position: absolute;
+  left: 70px;
+}
+.navigation-menu__item.stick,
+.navigation-menu__item.stick2,
+.navigation-menu__item.stick-mobile {
+  width: 2px;
+  height: 32px;
+  background-color: $contents-border-color;
+}
+.button-close-the-menu {
+  cursor: pointer;
+  border: none;
+  background-color: $content-bg-color;
+  margin:5px 0 0 10px;
+
+}
+.repair {
+  cursor: pointer;
+  position: absolute;
+  right: 80px;
+}
+.check-status {
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+}
+.stick {
+  position: absolute;
+  right: 150px;
+}

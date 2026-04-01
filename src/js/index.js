@@ -1,5 +1,4 @@
 import '../scss/style.scss'
-
 console.log('It works!')
 
 const desktopElementsShow = document.querySelectorAll(
@@ -66,25 +65,38 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 //here is the navigation menu open-close button
-const showNavigationMenuButton = document.getElementById('show-the-menu')
-const hideNavigationMenuButton = document.getElementById('close-button')
-const navigationMenu = document.getElementById('navigation-menu-button')
+const showNavigationMenuButton = document.getElementById('button-open-the-menu')
+const hideNavigationMenuButton = document.getElementById('button-close-the-menu')
+const navigationMenu = document.getElementById('side-bar-button')
 showNavigationMenuButton.addEventListener('click', showMenu)
 hideNavigationMenuButton.addEventListener('click', hideMenu)
-function showMenu(event) {
+window.addEventListener('resize', syncNavigationMenuViewport)
+syncNavigationMenuViewport()
 
-  navigationMenu.style.display = 'block'
+function syncNavigationMenuViewport() {
+  if (window.innerWidth >= 1120) {
+    hideMenu()
+  }
+}
+
+function showMenu(event) {
+  if (window.innerWidth >= 1120) { return }
+
+  navigationMenu.style.display = 'flex'
+  navigationMenu.style.height = 'auto'
   navigationMenu.style.opacity = '1'
   navigationMenu.style.visibility = 'visible'
-  navigationMenu.style.height = 'auto'
   navigationMenu.style.overflow = 'visible'
+  navigationMenu.style.height = '100dvh'
+  navigationMenu.style.overflowY = 'auto'
 }
 
 function hideMenu(event) {
+
   navigationMenu.style.display = 'none'
+  navigationMenu.style.height = '0'
   navigationMenu.style.opacity = '0'
   navigationMenu.style.visibility = 'hidden'
-  navigationMenu.style.height = '0'
   navigationMenu.style.overflow = 'hidden'
 }
 
@@ -97,55 +109,68 @@ showButton.addEventListener('click', show)
 hideButton.addEventListener('click', hide)
 
 function show(event) {
-  hiddenElements.style.height = 'auto'
-  hiddenElements.style.overflow = 'visible'
-  hiddenElements.style.opacity = '1'
-  hideButton.style.height = 'auto'
-  hideButton.style.overflow = 'visible'
-  hideButton.style.opacity = '1'
-  showButton.style.height = '0'
-  showButton.style.overflow = 'hidden'
-  showButton.style.opacity = '0'
 
+  hiddenElements.style.height = 'auto'
+  hiddenElements.style.opacity = '1'
+  hiddenElements.style.overflow = 'visible'
+
+  hideButton.style.height = 'auto'
+  hideButton.style.opacity = '1'
+  hideButton.style.overflow = 'visible'
+
+  showButton.style.height = '0'
+  showButton.style.opacity = '0'
+  showButton.style.overflow = 'hidden'
 }
+
 function hide(event) {
+
   hiddenElements.style.height = '0'
   hiddenElements.style.overflow = 'hidden'
   hiddenElements.style.opacity = '0'
+
   hideButton.style.height = '0'
   hideButton.style.overflow = 'hidden'
   hideButton.style.opacity = '0'
+
   showButton.style.height = 'auto'
   showButton.style.overflow = 'visible'
-showButton.style.opacity = '1'
+  showButton.style.opacity = '1'
 }
 
 //second sections buttons
-const hiddenElement = document.getElementById('2nd-section-hidden-elements')
-const hideBtn = document.getElementById('2nd-section-hideButton')
-const showBtn = document.getElementById('2nd-section-showButton')
+const hiddenElement = document.getElementById('second-style-grid-item2--hidden')
+const hideBtn = document.getElementById('second-section-hideButton')
+const showBtn = document.getElementById('second-section-showButton')
 
-showBtn.addEventListener('click', showelements)
-hideBtn.addEventListener('click', hideelements)
+showBtn.addEventListener('click', showElements)
+hideBtn.addEventListener('click', hideElements)
 
-function showelements(event) {
+function showElements(event) {
+
   hiddenElement.style.height = 'auto'
-  hiddenElement.style.overflow = 'visible'
   hiddenElement.style.opacity = '1'
-  showBtn.style.overflow = 'hidden'
-  showBtn.style.opacity = '0'
+  hiddenElement.style.overflow = 'visible'
+
   showBtn.style.height = '0'
+  showBtn.style.opacity = '0'
+  showBtn.style.overflow = 'hidden'
+
+  hideBtn.style.height = 'auto'
   hideBtn.style.opacity = '1'
   hideBtn.style.overflow = 'visible'
-  hideBtn.style.height = 'auto'
 }
-function hideelements(event) {
+
+function hideElements(event) {
+
   hiddenElement.style.height = '0px'
-  hiddenElement.style.overflow = 'hidden'
   hiddenElement.style.opacity = '0'
-  showBtn.style.overflow = 'visible'
-  showBtn.style.opacity = '1'
+  hiddenElement.style.overflow = 'hidden'
+ 
   showBtn.style.height = 'auto'
+  showBtn.style.opacity = '1'
+  showBtn.style.overflow = 'visible'
+
   hideBtn.style.opacity = '0'
   hideBtn.style.overflow = 'hidden'
 }

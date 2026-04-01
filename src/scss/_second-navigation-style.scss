@@ -1,0 +1,68 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.page__second-navigation-menu ul {
+  padding: 5px;
+  gap: 10px;
+  display: flex;
+  list-style-type: none;
+  margin: 5px 5px 10px 0px;
+}
+.second-navigation-menu__item {
+  margin: 5px 10px;
+  padding: 8px 18px;
+  color: $text-color;
+  cursor: pointer;
+  @include text-parameters(500, 16px, 24px, -0.2px, none);
+}
+.second-navigation-menu__item.item1 {
+  border: 2px solid $highlight-color;
+  border-radius: 6%;
+  background-color: $content-bg-color;
+  margin-left: 15px;
+}
+
+.service-and-prices__information {
+  padding: 20px;
+
+  p {
+    @include text-parameters(400, 14px, 20px, -0.2px, none);
+    color: $text-color;
+  }
+  a {
+    text-decoration: none;
+    color: $text-color;
+    font-weight: bold;
+  }
+  a span {
+    color: $button-color;
+    margin-bottom: 100px;
+    @include text-parameters(500, 16px, 24px, -0.2px, none);
+  }
+}
+@media (max-width: 767px) {
+  .page__second-navigation-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 768px) {
+  .page__second-navigation-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1120px) {
+     .page__second-navigation-menu {
+    margin-bottom: 0;
+  }
+  .page__second-navigation-menu ul {
+    padding: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
