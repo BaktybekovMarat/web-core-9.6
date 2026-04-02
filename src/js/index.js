@@ -24,8 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Инициализация первого свайпера (Ремонт техники различных брендов)
   const swiper = new Swiper('.swiper1', {
     // Указываем твои кастомные классы из HTML
-    centeredSlides: true, // центрировать активный слайд
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 16,
     pagination: { el: '.swiper-pagination1', clickable: true },
     breakpoints: {
@@ -38,8 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Инициализация первого свайпера (Ремонт различных видов техники)
   const swiper2 = new Swiper('.swiper2', {
     // Указываем твои кастомные классы из HTML
-    centeredSlides: true, // центрировать активный слайд
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 16,
     pagination: { el: '.swiper-pagination2', clickable: true },
     breakpoints: {
@@ -53,8 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper3 = new Swiper('.swiper3', {
     pagination: { el: '.swiper-pagination3', clickable: true },
     // Включаем свайпер только для мобильн  ых устройств (до 768px)
-    centeredSlides: true, // центрировать активный слайд
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 16,
     breakpoints: {
       767: {
@@ -66,7 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //here is the navigation menu open-close button
 const showNavigationMenuButton = document.getElementById('button-open-the-menu')
-const hideNavigationMenuButton = document.getElementById('button-close-the-menu')
+const hideNavigationMenuButton = document.getElementById(
+  'button-close-the-menu'
+)
 const navigationMenu = document.getElementById('side-bar-button')
 showNavigationMenuButton.addEventListener('click', showMenu)
 hideNavigationMenuButton.addEventListener('click', hideMenu)
@@ -80,7 +79,9 @@ function syncNavigationMenuViewport() {
 }
 
 function showMenu(event) {
-  if (window.innerWidth >= 1120) { return }
+  if (window.innerWidth >= 1120) {
+    return
+  }
 
   navigationMenu.style.display = 'flex'
   navigationMenu.style.height = 'auto'
@@ -92,7 +93,6 @@ function showMenu(event) {
 }
 
 function hideMenu(event) {
-
   navigationMenu.style.display = 'none'
   navigationMenu.style.height = '0'
   navigationMenu.style.opacity = '0'
@@ -109,7 +109,6 @@ showButton.addEventListener('click', show)
 hideButton.addEventListener('click', hide)
 
 function show(event) {
-
   hiddenElements.style.height = 'auto'
   hiddenElements.style.opacity = '1'
   hiddenElements.style.overflow = 'visible'
@@ -124,7 +123,6 @@ function show(event) {
 }
 
 function hide(event) {
-
   hiddenElements.style.height = '0'
   hiddenElements.style.overflow = 'hidden'
   hiddenElements.style.opacity = '0'
@@ -147,7 +145,6 @@ showBtn.addEventListener('click', showElements)
 hideBtn.addEventListener('click', hideElements)
 
 function showElements(event) {
-
   hiddenElement.style.height = 'auto'
   hiddenElement.style.opacity = '1'
   hiddenElement.style.overflow = 'visible'
@@ -162,11 +159,10 @@ function showElements(event) {
 }
 
 function hideElements(event) {
-
   hiddenElement.style.height = '0px'
   hiddenElement.style.opacity = '0'
   hiddenElement.style.overflow = 'hidden'
- 
+
   showBtn.style.height = 'auto'
   showBtn.style.opacity = '1'
   showBtn.style.overflow = 'visible'
