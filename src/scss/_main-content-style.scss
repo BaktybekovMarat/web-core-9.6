@@ -12,13 +12,6 @@
   @include text-parameters(400, 14px, 20px, -0.2px, none);
   margin: 10px 10px 10px 18px;
 }
-.main-content__logo-of-company-img:hover {
-  transition: none;
-  filter: none;
-  background: transparent;
-  transform: none;
-  box-shadow: none;
-}
 .main-content__logo-of-company-img {
   border-radius: 12px;
 }

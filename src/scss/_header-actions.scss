@@ -3,31 +3,18 @@
   cursor: pointer;
   width: 96.55px;
   height: 50.81px;
-  position: absolute;
-  left: 80px;
-  top: 18px;
 }
 .navigation-menu__item.profile {
   cursor: pointer;
-  position: absolute;
-  right: 180px;
+  margin: 10px 0px 10px 5px;
 }
-
 .navigation-menu__item.chat {
   cursor: pointer;
-  position: absolute;
-  right: 290px;
+  margin: 10px 0px 10px 5px;
 }
-
 .navigation-menu__item.call {
   cursor: pointer;
-  position: absolute;
-  right: 235px;
-}
-
-.stick2 {
-  position: absolute;
-  left: 70px;
+  margin: 10px 0px 10px auto;
 }
 .navigation-menu__item.stick,
 .navigation-menu__item.stick2,
@@ -40,20 +27,36 @@
   cursor: pointer;
   border: none;
   background-color: $content-bg-color;
-  margin:5px 0 0 10px;
-
+  margin: 5px 0 0 10px;
 }
 .repair {
   cursor: pointer;
-  position: absolute;
-  right: 80px;
+  margin: 10px 0px 10px 5px;
 }
 .check-status {
   cursor: pointer;
-  position: absolute;
-  right: 25px;
+  margin: 10px 5px 10px 5px;
+}
+.stick2 {
+  margin: 10px 5px 10px 5px;
 }
 .stick {
-  position: absolute;
-  right: 150px;
+  margin: 10px 0px 10px 5px;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    cursor: pointer;
+    width: 96.55px;
+    height: 50.81px;
+    margin: 0 10px;
+  }
+  .repair {
+    cursor: pointer;
+    margin: 10px 0px 10px auto;
+  }
+  .check-status {
+    cursor: pointer;
+    margin: 10px 5px 10px 5px;
+  }
 }

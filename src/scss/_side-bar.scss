@@ -43,15 +43,6 @@
   .side-bar__up-buttons span:last-child {
     margin: 5px 23px 0 60px;
   }
-  img {
-    transition: 0.1s ease-in-out;
-    filter: drop-shadow(1px);
-  }
-  img:hover {
-    background: $img-bg-color;
-    transform: translateY(1px);
-    box-shadow: $img-box-shadow-hover-color;
-  }
   .side-bar__lists,
   .side-bar__down-buttons {
     list-style-type: none;
@@ -126,19 +117,10 @@
   .side-bar__up-buttons a {
     width: 96.55px !important;
     height: 50.81px !important;
-    margin-left: 3px;
+    margin-left: 20px;
   }
   .side-bar__up-buttons span:last-child {
     margin: 5px 23px 0 60px;
-  }
-  img {
-    transition: 0.1s ease-in-out;
-    filter: drop-shadow(1px);
-  }
-  img:hover {
-    background: $img-bg-color;
-    transform: translateY(1px);
-    box-shadow: $img-box-shadow-hover-color;
   }
   .side-bar__lists,
   .side-bar__down-buttons {
